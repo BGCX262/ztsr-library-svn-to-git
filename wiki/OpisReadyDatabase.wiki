@@ -1,0 +1,38 @@
+#summary Jak obsługiwać plik ready-database.script i ciekawostki zwiazane z danymi.
+#labels Phase-QA
+
+= Wstęp =
+
+Plik ready-database.script służy do uruchomienia w programie bazy danych wypełnionej danymi udającymi rzeczywiste funkcjonowanie biblioteki.
+
+= Co zrobić z plikiem? =
+ # Uruchomić serwer po raz pierwszy.
+ # Zamknąć.
+ # Podmienić plik library.script na ready-database.script (oczywiście trzeba będzie zmienić nazwę).
+ # Nie ruszać pliku library.properties.
+
+= Co jest w pliku? =
+
+== Książki ==
+Plik aktualnie zawiera 11 książek, każda z nich ma przynajmniej jeden egzemplarz (najczęściej - dwa). Są książki, których w ogóle nie można pożyczyć (np. mają tylko niedostępne egzemplarze).
+
+Z ciekawostek:
+ * są dwie książki Poego o tych samych tytułach. Różnią się wydawnictwem i rokiem wydania.
+ * "algorytm" wyszukuje "_Algorytmy_ i struktury danych" i "Wprowadzenie do _algorytmów_". "rytm" również zwraca oba tytuły.
+ * Grabińskiego nijak nie da się zamówić ani zarezerwować - jest jeden niedostępny egzemplarz.
+ * Jest "Thomas H. Cormen". Działa też wyszukiwanie "Cormen Thomas" i "Thomas Cormen".
+
+== Czytelnicy ==
+Czytelników jest sześciu: numery kart od 1 do 6. Hasło każdego użytkownika to odpowiedni liczebnik porządkowy: tak więc użytkownik "1" ma hasło "pierwszy" a "6" hasło "szósty". Wszystko z małych liter, z użyciem polskich znaków.
+
+*Następni użytkownicy powinni używać podobnej konwencji haseł, bo się ich pozapomina.*
+
+== Wypożyczenia ==
+Czytelnicy *5 i 6 nie mają nic* - żadnych wypożyczeń, zamówień, rezerwacji. Są "czyści".
+
+Pozostali czytelnicy mają najczęściej wszystko - zamówienia, rezerwacje, wypożyczenia.
+
+Rezerwacje:
+ * trzeci egzemplarz Cormena, pożyczony przez 1, rezerwacje: 2 (pierwszy w kolejce),3
+ * "Kongres futurologiczny", zamówiony przez 2, rezerwacje: 4,3,1
+ * pierwszy egzemplarz "Kompilatorów": pożyczony przez 1, rezerwacje: 2
